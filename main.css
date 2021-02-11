@@ -1,0 +1,77 @@
+* {
+    text-align: center;
+    
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: url('../Audio\ and\ Images/stick\ war.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.buttons, .back {
+    position: relative;
+    top: 200px;
+    height: 100px;
+    width: 250px;
+    margin: 20px;
+    font-size: 40px;
+    border: 5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#guide {
+    top: 215px;
+}
+
+.floating, .-floating {   
+    animation-name: floating; 
+    animation-duration: 3s; 
+    animation-iteration-count: infinite; 
+    animation-timing-function: ease-in-out; 
+    margin-left: 30px; 
+    margin-top: 5px; 
+}
+  
+.-floating {
+    animation-name: -floating; 
+}
+
+.floating:hover, .-floating:hover {
+    animation: none;
+    background-color: #cccccc;
+}
+
+@keyframes floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 5px); } 
+    100%   { transform: translate(0, -0px); }     
+} 
+@keyframes -floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, -5px); } 
+    100%   { transform: translate(0, -0px); }     
+}
+.back {
+    left: -950px;
+    top: 270px;
+    height: 60px;
+    font-size: 27px;
+    width: 100px;
+}
+.gameOptions {
+    display: inline-block;
+    height: 170px;
+    width: 270px;
+    position: relative;
+    margin: 40px;
+    margin-top: -30px;
+    font-size: 70px;
+}
+
+#op3, #op4 {
+    left: 80px;
+    margin-top: 5px;
+}
