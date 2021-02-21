@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../../../main.css">
+    <link rel="stylesheet" href="gameStyle.css">
+    <title>Start a Local Game</title>
+    <style>
+        .back {
+            top: 550px;
+            left: -550px;
+        }
+
+        #selectPlayerAmount {
+            position: relative;
+            top: 1px;
+            left: 100px;
+        }
+
+        #gameTime {
+            position: relative;
+            top: 75px;
+            left: -374px;
+        }
+
+        #chooseGameTime {
+            position: relative;
+            top: 15px;
+            left: 96px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="startMenu">
+        <button class="back floating" onclick="location.replace('../startGame.html');">BACK</button>
+        <div id="container">
+            <h1><u>Local Game Setup</u></h1>
+            <h2 class="playerAmountLine">Player Amount:</h2>
+            <select class="playerAmountLine selections" id="selectPlayerAmount">
+                <option value="2">2</op>
+                <option value="3">3</op>
+                <option value="4">4</op>
+            </select>
+            <h2 class="gameTimeLine" id="gameTime">Game Duration:</h2>
+            <select class="gameTimeLine selections" id="chooseGameTime">
+                <option value="none">None</option>
+                <option value="15">15min</option>
+                <option value="30">30min</option>
+                <option value="45">45min</option>
+                <option value="60">60min</option>
+            </select>
+            <button class="-floating" id="start" onclick="g.start('Local');">Start Game</button>
+        </div>
+    </div>
+
+    <div id="actualGame" style="display: none; height: auto; width: auto;">
+        <div class="cards" id="yourCards"></div>
+        <div class="cards" id="rivalsCards"></div>
+        <div class="armies" id="yourArmy"></div>
+        <div class="armies" id="rivalsArmy"></div>
+        <div class="middleCards" id="pile"></div>
+        <div class="middleCards" id="deck"></div>
+    </div>
+</body>
+<script src="index.js"></script>
+<script>
+
+</script>
+
+</html>
